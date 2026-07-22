@@ -90,19 +90,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // Trigger flap open animation
         envelopeWrapper.classList.add('opened');
 
+        // Reveal main website behind the opening doors early
+        setTimeout(() => {
+            mainContent.classList.remove('hidden');
+            mainContent.classList.add('reveal-hero');
+        }, 200);
+
         // Transit directly to main website as folds fly open
         setTimeout(() => {
             envelopeWrapper.classList.add('fade-out');
-            mainContent.classList.remove('hidden');
 
             // Show floating music button
             setTimeout(() => {
                 musicBtn.classList.add('show');
-            }, 600);
+            }, 200);
 
             // Start romantic particle flowers
             startPetals();
-        }, 1200);
+        }, 700);
     });
 
     /* ==========================================================================

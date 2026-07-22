@@ -115,6 +115,30 @@ h1, h2, h3, h4 {
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
+/* Enhanced View on Google Maps Button */
+.btn-maps {
+    background: linear-gradient(135deg, #D4AF37 0%, #B89222 100%) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 1rem 2.5rem !important;
+    font-family: var(--font-body) !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    border-radius: 50px !important;
+    box-shadow: 0 6px 22px rgba(212, 175, 55, 0.45), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    text-decoration: none !important;
+}
+
+.btn-maps:hover {
+    background: linear-gradient(135deg, #E6C24A 0%, #C59D28 100%) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-3px) scale(1.04) !important;
+    box-shadow: 0 10px 32px rgba(212, 175, 55, 0.65), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* Section Common Styles */
 section {
     padding: 6rem 1.5rem;

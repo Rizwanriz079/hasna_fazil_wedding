@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Celebration | Fathima Hasna & Fazil</title>
+    <meta name="description" content="Official wedding website of Fathima Hasna. R and Fazil V.K. Join us in sharing the happiness. Nikkah on Sunday, 9th August 2026.">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Cursor SVG (Ring Icon) -->
+    <style>
+        * { cursor: none !important; }
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Custom Cursor Element -->
+    <div id="custom-cursor" class="custom-cursor">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="10" stroke="#D4AF37" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="6" fill="#D4AF37" fill-opacity="0.15"/>
+            <circle cx="20" cy="20" r="2" fill="#D4AF37"/>
+            <!-- Small diamond on top -->
+            <path d="M20 8 L22 10 L20 12 L18 10 Z" fill="#D4AF37"/>
+        </svg>
+    </div>
+    <div id="cursor-trail" class="cursor-trail"></div>
+
+    <!-- Ambient Particles Background -->
+    <div id="particle-container"></div>
+
+    <!-- Background Music Audio Tag (Serving local copy for 100% reliability) -->
+    <audio id="bg-audio" loop preload="auto">
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Interactive Envelope (To bypass browser autoplay blocks) -->
+    <div id="envelope-wrapper" class="envelope-wrapper">
+
+        <!-- Hanging Tag -->
+        <div class="hanging-tag">
+            <div class="tag-string"></div>
+            <div class="tag-card"></div>
+        </div>
+
+        <!-- Flaps -->
+        <div class="envelope-flap flap-left"></div>
+        <div class="envelope-flap flap-right"></div>
+        <div class="envelope-flap flap-bottom"></div>
+        <div class="envelope-flap flap-top"></div>
+
+        <!-- Wax Seal -->
+        <button id="wax-seal" class="wax-seal" aria-label="Open envelope seal">
+            <span class="seal-text">Save<br>the<br>Date</span>
+        </button>
+    </div>
+
+    <!-- Main Web Content -->
+    <div id="main-content" class="hidden">
+
+        <!-- Hero Section — No header bar, full-bleed -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <p class="bismillah animate-fade-in">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                <p class="intro-text animate-fade-in">We Request the Honour of Your Presence</p>
+                <h1 class="couple-names animate-slide-up">
+                    <span class="name-bride">Fathima Hasna</span>
+                    <span class="ampersand">&</span>
+                    <span class="name-groom">Fazil</span>
+                </h1>
+            </div>
+
+            <!-- Pinned to bottom of hero -->
+            <div class="hero-bottom">
+                <p class="event-headline animate-fade-in">Are getting married</p>
+                <div class="scroll-indicator">
+                    <span class="mouse-scroll"></span>
+                    <span class="scroll-text">Scroll Down</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Couple Section -->
+        <section id="couple" class="couple-section">
+            <div class="section-ornament">
+                <img src="assets/bride_groom.png" alt="Bride and Groom Illustration" class="couple-illustration">
+            </div>
+            
+            <h2 class="section-title">The Happy Couple</h2>
+            <p class="section-subtitle">"And We created you in pairs" — Quran 78:8</p>
+
+            <div class="couple-grid">
+                <!-- Bride Card -->
+                <div class="couple-card bride-card scroll-reveal">
+                    <div class="couple-card-header">
+                        <div class="card-rose">✿</div>
+                        <h3>The Bride</h3>
+                        <h4 class="fullname">Fathima Hasna. R</h4>
+                    </div>
+                    <div class="couple-details">
+                        <p class="relationship">Grand-daughter of</p>
+                        <p class="parents">Late P. Bappu & Mymoona</p>
+                        <div class="divider-ornament">— ✦ —</div>
+                        <p class="relationship">Beloved Daughter of</p>
+                        <p class="parents">Mr. Rafi Ahamed & Mrs. Parveena B</p>
+                        <p class="address">
+                            <svg viewBox="0 0 24 24" style="width:13px;height:13px;display:inline-block;vertical-align:middle;margin-right:5px;fill:#D4AF37;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            SABAHAT, AG Road, Calicut - 673001
+                        </p>
+                        <p class="contact">
+                            <svg viewBox="0 0 24 24" style="width:13px;height:13px;display:inline-block;vertical-align:middle;margin-right:5px;fill:#D4AF37;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.01-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            +91 9447239745
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Groom Card -->
+                <div class="couple-card groom-card scroll-reveal">
+                    <div class="couple-card-header">
+                        <div class="card-rose">✿</div>
+                        <h3>The Groom</h3>
+                        <h4 class="fullname">Fazil V.K</h4>
+                    </div>
+                    <div class="couple-details">
+                        <p class="relationship">Beloved Son of</p>
+                        <p class="parents">Mr. Kareem & Mrs. Sameena Kareem</p>
+                        <div class="divider-ornament">— ✦ —</div>
+                        <p class="address">
+                            <svg viewBox="0 0 24 24" style="width:13px;height:13px;display:inline-block;vertical-align:middle;margin-right:5px;fill:#D4AF37;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            Valayathukuzhi (H), Veliyankode,<br>Ponnani, Malappuram
+                        </p>
+                        <p class="contact">
+                            <svg viewBox="0 0 24 24" style="width:13px;height:13px;display:inline-block;vertical-align:middle;margin-right:5px;fill:#D4AF37;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.01-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            +91 7902788135
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details & Timeline Section -->
+        <section id="event" class="event-section">
+            <h2 class="section-title">Nikkah Ceremony</h2>
+            <p class="section-subtitle">Insha Allah, We Invite You to Witness Our Vows</p>
+
+            <div class="event-details-card scroll-reveal">
+                <!-- Info cards grid -->
+                <div class="event-info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#D4AF37;"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        </div>
+                        <h3>Date</h3>
+                        <p class="info-highlight">Sunday, 9th August 2026</p>
+                        <p class="hijri-date">(1448 Safar 15)</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#D4AF37;"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        </div>
+                        <h3>Time</h3>
+                        <p class="info-highlight">11:30 AM – 12:30 PM</p>
+                        <p class="sub-text">Followed by lunch</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#D4AF37;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <h3>Venue</h3>
+                        <p class="info-highlight">Meenooz</p>
+                        <p class="sub-text">Aravind Gosh Road, near Vellayil Flyover, Vellayil, Kozhikode</p>
+                    </div>
+                </div>
+
+                <!-- Event Timeline -->
+                <div class="timeline-container">
+                    <h3 class="timeline-title">Event Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-time">11:30 AM</h4>
+                                <p class="timeline-desc">Nikkah Ceremony (Vows)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-time">12:30 PM</h4>
+                                <p class="timeline-desc">Wedding Feast (Lunch)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map Area -->
+                <div class="map-container">
+                    <div class="map-iframe-wrapper">
+                        <iframe src="https://maps.google.com/maps?q=Meenooz%20Vellayil%20Kozhikode%20Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="map-action">
+                        <a href="https://maps.app.goo.gl/ViQJ13hBSoEk4u9D9" target="_blank" class="btn-secondary">
+                            <svg viewBox="0 0 24 24" style="width:17px;height:17px;display:inline-block;vertical-align:middle;margin-right:7px;fill:currentColor;"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
+                            View on Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown-section" class="countdown-section scroll-reveal">
+            <div class="countdown-bg-overlay"></div>
+            <div class="countdown-content">
+                <h2 class="section-title white">Counting Down</h2>
+                <p class="section-subtitle gold">The Celebration Begins In</p>
+                <div id="countdown" class="countdown-container">
+                    <div class="countdown-box">
+                        <span id="days" class="time">00</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="hours" class="time">00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="minutes" class="time">00</span>
+                        <span class="label">Mins</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="seconds" class="time">00</span>
+                        <span class="label">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-decor">✦ ✦ ✦</div>
+            <p class="footer-gratitude">
+                With hearts full of joy and gratitude, we request the honour of your presence as we celebrate this Nikkah ceremony. Your prayers and company would mean the world to us on this special day.
+            </p>
+            <p class="footer-wishes-label">Best wishes from</p>
+            <p class="footer-wishes-from">ASLAM & ULFATH</p>
+            <p class="footer-wishes-sub">Friends & Family</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fathima Hasna & Fazil. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Floating Music Icon Button (replaces wide player bar) -->
+    <button id="music-btn" class="music-icon-btn" aria-label="Toggle background music">
+        <svg id="music-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="music-ripple"></span>
+    </button>
+
+</body>
+</html>

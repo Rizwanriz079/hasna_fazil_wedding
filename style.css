@@ -198,6 +198,9 @@ section {
 /* --------------------------------------------------------------------------
    3. Interactive Envelope & Seal (Image 1 Style Match)
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   3. Interactive Envelope & Seal (Ivory Cream & Metallic Gold Theme)
+   -------------------------------------------------------------------------- */
 .envelope-wrapper {
     position: fixed;
     top: 0;
@@ -205,10 +208,10 @@ section {
     width: 100vw;
     height: 100vh;
 
-    /* Soft Blush Rose Cream Background (Image 1 match) */
-    background-color: #FAF4EE;
+    /* Elegant Warm Ivory & Gold Romantic Background */
+    background-color: #FAF7F0;
     background-image:
-        radial-gradient(ellipse 75% 65% at 50% 50%, #FFFDFB 0%, #F4E8DF 100%);
+        radial-gradient(ellipse 80% 65% at 50% 50%, #FFFDF8 0%, #F4EEDF 100%);
 
     z-index: 9999;
     overflow: hidden;
@@ -220,31 +223,31 @@ section {
     transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), visibility 1s;
 }
 
-/* Vertical Center Seam Line (Image 1 match) */
+/* Vertical Center Seam Line (Gold Seam) */
 .envelope-center-line {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 1px;
-    background: linear-gradient(to bottom, rgba(160, 110, 115, 0.15) 0%, rgba(160, 110, 115, 0.3) 50%, rgba(160, 110, 115, 0.15) 100%);
+    width: 1.5px;
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.45) 50%, rgba(212, 175, 55, 0.15) 100%);
     transform: translateX(-50%);
     z-index: 4;
     pointer-events: none;
 }
 
-/* Animated subtle light sparkles */
+/* Animated light gold sparkles */
 .envelope-wrapper::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image:
-        radial-gradient(1.5px 1.5px at 15% 20%, rgba(160,110,115,0.4) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 85% 15%, rgba(160,110,115,0.35) 0%, transparent 100%),
-        radial-gradient(2px 2px at 50% 80%, rgba(212,175,55,0.3) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 70% 55%, rgba(160,110,115,0.3) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 25% 65%, rgba(212,175,55,0.3) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 90% 75%, rgba(160,110,115,0.4) 0%, transparent 100%);
+        radial-gradient(1.5px 1.5px at 15% 20%, rgba(212,175,55,0.6) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 85% 15%, rgba(212,175,55,0.5) 0%, transparent 100%),
+        radial-gradient(2px 2px at 50% 80%, rgba(212,175,55,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 70% 55%, rgba(184,146,34,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 25% 65%, rgba(212,175,55,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90% 75%, rgba(212,175,55,0.5) 0%, transparent 100%);
     animation: twinkle 4s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: 0;
@@ -268,63 +271,63 @@ section {
     pointer-events: none;
 }
 
-/* Diagonal flap lines using clip-path — Warm Rose Cream Tones */
+/* Diagonal flap lines using clip-path — Warm Cream & Gold Tones */
 .flap-top {
-    background: linear-gradient(to bottom, #FFFDFB 0%, #F4E8DF 100%);
+    background: linear-gradient(to bottom, #FFFDF8 0%, #F5EFE0 100%);
     clip-path: polygon(0 0, 100% 0, 50% 50%);
     z-index: 8;
     animation: flapEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both 0.05s;
 }
 
 .flap-bottom {
-    background: linear-gradient(to top, #FAF0E8 0%, #EFE1D5 100%);
+    background: linear-gradient(to top, #FAF6EC 0%, #EBE3D0 100%);
     clip-path: polygon(0 100%, 100% 100%, 50% 50%);
     z-index: 7;
     animation: flapEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both 0.1s;
 }
 
 .flap-left {
-    background: linear-gradient(to right, #FFFDFB 0%, #F2E4DA 100%);
+    background: linear-gradient(to right, #FFFDF8 0%, #EDE5D2 100%);
     clip-path: polygon(0 0, 0 100%, 50% 50%);
     z-index: 6;
     animation: flapEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both 0.15s;
 }
 
 .flap-right {
-    background: linear-gradient(to left, #FFFDFB 0%, #F2E4DA 100%);
+    background: linear-gradient(to left, #FFFDF8 0%, #EDE5D2 100%);
     clip-path: polygon(100% 0, 100% 100%, 50% 50%);
     z-index: 6;
     animation: flapEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both 0.2s;
 }
 
-/* Realistic Flap Shadow Band Overlay (Matching Image 1) */
+/* Flap Shadow Band Overlay (Soft Warm Gold Shadows) */
 .flap-top::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(100, 30, 45, 0.04) 0%, rgba(100, 30, 45, 0.12) 100%);
+    background: linear-gradient(180deg, rgba(180, 140, 50, 0.03) 0%, rgba(180, 140, 50, 0.1) 100%);
 }
 
 .flap-bottom::after {
     content: '';
     position: absolute;
     inset: 0;
-    box-shadow: 0 -12px 30px rgba(100, 30, 45, 0.12);
-    background: linear-gradient(0deg, rgba(100, 30, 45, 0.04) 0%, transparent 60%);
+    box-shadow: 0 -12px 30px rgba(53, 46, 30, 0.1);
+    background: linear-gradient(0deg, rgba(180, 140, 50, 0.04) 0%, transparent 60%);
 }
 
 .flap-left::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(100, 30, 45, 0.14) 0%, rgba(100, 30, 45, 0.02) 65%);
+    background: linear-gradient(135deg, rgba(180, 140, 50, 0.12) 0%, rgba(180, 140, 50, 0.02) 65%);
 }
 
 .flap-right::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(225deg, rgba(100, 30, 45, 0.14) 0%, rgba(100, 30, 45, 0.02) 65%);
+    background: linear-gradient(225deg, rgba(180, 140, 50, 0.12) 0%, rgba(180, 140, 50, 0.02) 65%);
 }
 
 @keyframes flapEntrance {
@@ -332,25 +335,25 @@ section {
     to   { opacity: 1; transform: scale(1); }
 }
 
-/* Deep Burgundy Wax Seal (Exact Match to Image 1) */
+/* Metallic Gold Wax Seal */
 .wax-seal {
     position: relative;
     z-index: 10;
     width: 110px;
     height: 110px;
-    background: radial-gradient(circle at 35% 35%, #8B1E3F 0%, #6B0F2A 55%, #4A071B 100%);
-    border: 2px solid rgba(245, 232, 152, 0.7);
+    background: radial-gradient(circle at 35% 35%, #FFF8D6 0%, #D4AF37 50%, #B89222 100%);
+    border: 2px double rgba(255, 255, 255, 0.85);
     border-radius: 50%;
     box-shadow:
-        0 0 0 4px rgba(107, 15, 42, 0.5),
-        0 0 0 6px rgba(245, 232, 152, 0.35),
-        0 12px 35px rgba(74, 7, 27, 0.5),
-        inset 0 3px 6px rgba(255, 255, 255, 0.3),
-        inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+        0 0 0 5px rgba(212, 175, 55, 0.25),
+        0 0 0 9px rgba(212, 175, 55, 0.1),
+        0 12px 35px rgba(212, 175, 55, 0.45),
+        inset 0 3px 6px rgba(255, 255, 255, 0.6),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #F8E7A1;
+    color: #352E1E;
     cursor: pointer;
     outline: none;
     animation: sealEntrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 0.4s,
@@ -361,11 +364,11 @@ section {
 .wax-seal:hover {
     transform: scale(1.1);
     box-shadow:
-        0 0 0 6px rgba(107, 15, 42, 0.6),
-        0 0 0 9px rgba(245, 232, 152, 0.5),
-        0 16px 45px rgba(74, 7, 27, 0.65),
-        inset 0 3px 6px rgba(255, 255, 255, 0.4),
-        inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+        0 0 0 7px rgba(212, 175, 55, 0.35),
+        0 0 0 12px rgba(212, 175, 55, 0.15),
+        0 16px 45px rgba(212, 175, 55, 0.6),
+        inset 0 3px 6px rgba(255, 255, 255, 0.75),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes sealEntrance {
@@ -383,12 +386,12 @@ section {
     font-size: 1.2rem;
     line-height: 1.15;
     text-align: center;
-    color: #F8E7A1;
-    font-weight: 400;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    color: #2E2514;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
-/* Deep Burgundy Hanging Tag (Top Left - Image 1 match) */
+/* Metallic Gold Hanging Tag (Top Left) */
 .hanging-tag {
     position: absolute;
     top: 0;
@@ -409,16 +412,16 @@ section {
 .tag-string {
     width: 1px;
     height: 60px;
-    background: linear-gradient(to bottom, rgba(107,15,42,0) 0%, rgba(107,15,42,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(212,175,55,0) 0%, rgba(212,175,55,0.8) 100%);
 }
 
 .tag-card {
     width: 28px;
     height: 42px;
-    background: linear-gradient(135deg, #8B1E3F 0%, #6B0F2A 50%, #4A071B 100%);
+    background: linear-gradient(135deg, #FFF6CC 0%, #D4AF37 50%, #B89222 100%);
     border-radius: 3px;
-    box-shadow: 2px 5px 15px rgba(74, 7, 27, 0.35);
-    border: 1px solid rgba(245, 232, 152, 0.4);
+    box-shadow: 2px 4px 14px rgba(53, 46, 30, 0.25);
+    border: 1px solid rgba(255,255,255,0.5);
     animation: tagSway 4s ease-in-out infinite 1.8s;
 }
 
@@ -450,6 +453,7 @@ section {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+
 
 
 /* --------------------------------------------------------------------------

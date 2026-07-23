@@ -18,21 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.getElementById('custom-cursor');
     const trail = document.getElementById('cursor-trail');
 
-    let trailX = 0, trailY = 0;
+    if (cursor && trail) {
+        let trailX = 0, trailY = 0;
 
-    document.addEventListener('mousemove', (e) => {
-        // Instantly move primary cursor
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top  = e.clientY + 'px';
-        // Trail follows with slight CSS delay via transition
-        trailX = e.clientX;
-        trailY = e.clientY;
-        trail.style.left = trailX + 'px';
-        trail.style.top  = trailY + 'px';
-    });
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top  = e.clientY + 'px';
+            trailX = e.clientX;
+            trailY = e.clientY;
+            trail.style.left = trailX + 'px';
+            trail.style.top  = trailY + 'px';
+        });
 
-    document.addEventListener('mousedown', () => cursor.classList.add('clicking'));
-    document.addEventListener('mouseup',   () => cursor.classList.remove('clicking'));
+        document.addEventListener('mousedown', () => cursor.classList.add('clicking'));
+        document.addEventListener('mouseup',   () => cursor.classList.remove('clicking'));
+    }
 
     /* ==========================================================================
        3. Music Icon Button — play / pause toggle

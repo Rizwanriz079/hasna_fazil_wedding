@@ -8,22 +8,24 @@
    1. Design System & CSS Variables
    -------------------------------------------------------------------------- */
 :root {
-    --color-bg-primary: #FCFBF8;
-    --color-bg-secondary: #F6F4ED;
-    --color-primary-gold: #D4AF37;
-    --color-gold-hover: #AA8825;
-    --color-text-dark: #352E1E;
-    --color-text-muted: #6B624E;
-    --color-glass-white: rgba(255, 255, 255, 0.75);
-    --color-glass-gold: rgba(212, 175, 55, 0.15);
-    --border-glass: 1px solid rgba(212, 175, 55, 0.25);
-    --shadow-premium: 0 10px 30px rgba(53, 46, 30, 0.08);
-    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.03);
-    
+    --color-bg-primary: #4A1520;
+    --color-bg-secondary: #3A1019;
+    --maroon-texture: repeating-linear-gradient(45deg, #4A1520, #4A1520 2px, #42111B 2px, #42111B 4px);
+    --color-primary-gold: #CFA86E;
+    --color-rose-gold: #B76E79;
+    --color-gold-hover: #E4C590;
+    --color-text-dark: #FDF8F5;
+    --color-text-muted: #E2DFD3;
+    --color-glass-white: rgba(255, 255, 255, 0.08);
+    --color-glass-gold: rgba(207, 168, 110, 0.2);
+    --border-glass: 1px solid rgba(207, 168, 110, 0.3);
+    --shadow-premium: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.2);
+
     --font-heading: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Montserrat', sans-serif;
     --font-accent: 'Great Vibes', cursive;
-    
+
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-quick: all 0.2s ease;
 }
@@ -49,7 +51,10 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 500;
 }
@@ -208,7 +213,7 @@ section {
     width: 100vw;
     height: 100vh;
 
-    /* Elegant Warm Ivory & Gold Romantic Background */
+    /* Light Ivory Cream Opening Screen Background */
     background-color: #FAF7F0;
     background-image:
         radial-gradient(ellipse 80% 65% at 50% 50%, #FFFDF8 0%, #F4EEDF 100%);
@@ -223,14 +228,14 @@ section {
     transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), visibility 1s;
 }
 
-/* Vertical Center Seam Line (Gold Seam) */
+/* Vertical Center Seam Line */
 .envelope-center-line {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
     width: 1.5px;
-    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.45) 50%, rgba(212, 175, 55, 0.15) 100%);
+    background: linear-gradient(to bottom, rgba(183, 110, 121, 0.15) 0%, rgba(183, 110, 121, 0.45) 50%, rgba(183, 110, 121, 0.15) 100%);
     transform: translateX(-50%);
     z-index: 4;
     pointer-events: none;
@@ -242,12 +247,12 @@ section {
     position: absolute;
     inset: 0;
     background-image:
-        radial-gradient(1.5px 1.5px at 15% 20%, rgba(212,175,55,0.6) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 85% 15%, rgba(212,175,55,0.5) 0%, transparent 100%),
-        radial-gradient(2px 2px at 50% 80%, rgba(212,175,55,0.5) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 70% 55%, rgba(184,146,34,0.4) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 25% 65%, rgba(212,175,55,0.4) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 90% 75%, rgba(212,175,55,0.5) 0%, transparent 100%);
+        radial-gradient(1.5px 1.5px at 15% 20%, rgba(207, 168, 110, 0.6) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 85% 15%, rgba(207, 168, 110, 0.5) 0%, transparent 100%),
+        radial-gradient(2px 2px at 50% 80%, rgba(207, 168, 110, 0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 70% 55%, rgba(207, 168, 110, 0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 25% 65%, rgba(207, 168, 110, 0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90% 75%, rgba(207, 168, 110, 0.5) 0%, transparent 100%);
     animation: twinkle 4s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: 0;
@@ -259,7 +264,7 @@ section {
     pointer-events: none;
 }
 
-/* Flaps covering screen */
+/* Flaps covering screen — Light Ivory & Cream Tones */
 .envelope-flap {
     position: absolute;
     top: 0;
@@ -271,7 +276,6 @@ section {
     pointer-events: none;
 }
 
-/* Diagonal flap lines using clip-path — Warm Cream & Gold Tones */
 .flap-top {
     background: linear-gradient(to bottom, #FFFDF8 0%, #F5EFE0 100%);
     clip-path: polygon(0 0, 100% 0, 50% 50%);
@@ -300,7 +304,7 @@ section {
     animation: flapEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) both 0.2s;
 }
 
-/* Flap Shadow Band Overlay (Soft Warm Gold Shadows) */
+/* Flap Shadow Band Overlay */
 .flap-top::after {
     content: '';
     position: absolute;
@@ -331,64 +335,93 @@ section {
 }
 
 @keyframes flapEntrance {
-    from { opacity: 0; transform: scale(1.03); }
-    to   { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-/* Metallic Gold Wax Seal */
+/* Deep Maroon Wax Seal Button with Crisp White Bold Text */
 .wax-seal {
     position: relative;
     z-index: 10;
-    width: 110px;
-    height: 110px;
-    background: radial-gradient(circle at 35% 35%, #FFF8D6 0%, #D4AF37 50%, #B89222 100%);
-    border: 2px double rgba(255, 255, 255, 0.85);
+    width: 115px;
+    height: 115px;
+    background: radial-gradient(circle at 35% 35%, #7D1F31 0%, #6A1928 60%, #4A101B 100%);
+    border: 2px solid rgba(212, 175, 55, 0.6);
     border-radius: 50%;
     box-shadow:
-        0 0 0 5px rgba(212, 175, 55, 0.25),
-        0 0 0 9px rgba(212, 175, 55, 0.1),
-        0 12px 35px rgba(212, 175, 55, 0.45),
-        inset 0 3px 6px rgba(255, 255, 255, 0.6),
-        inset 0 -3px 6px rgba(0, 0, 0, 0.15);
+        0 0 0 4px rgba(106, 25, 40, 0.25),
+        0 8px 30px rgba(0, 0, 0, 0.35),
+        inset 0 0 15px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #352E1E;
+    color: #FFFFFF;
     cursor: pointer;
     outline: none;
     animation: sealEntrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) both 0.4s,
-               sealFloat 3.5s ease-in-out infinite 1.8s;
+        sealFloat 3.5s ease-in-out infinite 1.8s;
     transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.wax-seal::after {
+    content: '';
+    position: absolute;
+    width: 101px;
+    height: 101px;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
 .wax-seal:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
     box-shadow:
-        0 0 0 7px rgba(212, 175, 55, 0.35),
-        0 0 0 12px rgba(212, 175, 55, 0.15),
-        0 16px 45px rgba(212, 175, 55, 0.6),
-        inset 0 3px 6px rgba(255, 255, 255, 0.75),
-        inset 0 -3px 6px rgba(0, 0, 0, 0.15);
+        0 0 0 6px rgba(106, 25, 40, 0.35),
+        0 12px 40px rgba(0, 0, 0, 0.45),
+        inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes sealEntrance {
-    from { opacity: 0; transform: scale(0.5) rotate(-15deg); }
-    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 @keyframes sealFloat {
-    0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .seal-text {
-    font-family: var(--font-accent);
-    font-size: 1.2rem;
-    line-height: 1.15;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    line-height: 1.25;
     text-align: center;
-    color: #2E2514;
+    color: #FFFFFF;
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Metallic Gold Hanging Tag (Top Left) */
@@ -405,14 +438,21 @@ section {
 }
 
 @keyframes tagDrop {
-    from { transform: translateY(-80px); opacity: 0; }
-    to   { transform: translateY(0);     opacity: 1; }
+    from {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .tag-string {
     width: 1px;
     height: 60px;
-    background: linear-gradient(to bottom, rgba(212,175,55,0) 0%, rgba(212,175,55,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0) 0%, rgba(212, 175, 55, 0.8) 100%);
 }
 
 .tag-card {
@@ -421,13 +461,20 @@ section {
     background: linear-gradient(135deg, #FFF6CC 0%, #D4AF37 50%, #B89222 100%);
     border-radius: 3px;
     box-shadow: 2px 4px 14px rgba(53, 46, 30, 0.25);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     animation: tagSway 4s ease-in-out infinite 1.8s;
 }
 
 @keyframes tagSway {
-    0%, 100% { transform: rotate(-4deg); }
-    50%       { transform: rotate(4deg); }
+
+    0%,
+    100% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
 }
 
 /* Snappy Realistic Envelope Opening Sequence (Matching User Screenshots) */
@@ -505,28 +552,63 @@ section {
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(35px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInTracking {
-    from { opacity: 0; letter-spacing: 1px; transform: translateY(15px); }
-    to   { opacity: 1; letter-spacing: 3px; transform: translateY(0); }
+    from {
+        opacity: 0;
+        letter-spacing: 1px;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: 3px;
+        transform: translateY(0);
+    }
 }
 
 @keyframes popInGlow {
-    from { opacity: 0; transform: scale(0.3) rotate(-15deg); }
-    to   { opacity: 1; transform: scale(1) rotate(0deg); }
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotate(-15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -542,7 +624,7 @@ section {
     position: relative;
     padding: 0;
     text-align: center;
-    background-image: url('assets/wedding_bg.png');
+    background-image: url('assets/maroon_wedding_bg.png');
     background-size: cover;
     background-position: center;
     max-width: 100%;
@@ -554,7 +636,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(30, 26, 18, 0.45) 0%, rgba(30, 26, 18, 0.75) 100%);
+    background: linear-gradient(180deg, rgba(74, 21, 32, 0.65) 0%, rgba(58, 16, 25, 0.85) 100%);
     z-index: 1;
 }
 
@@ -726,7 +808,7 @@ section {
    -------------------------------------------------------------------------- */
 .couple-section {
     text-align: center;
-    background-color: var(--color-bg-primary);
+    background: var(--maroon-texture);
 }
 
 .section-ornament {
@@ -740,7 +822,8 @@ section {
     border-radius: 50%;
     border: 3px double var(--color-primary-gold);
     padding: 10px;
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
     box-shadow: var(--shadow-premium);
 }
 
@@ -859,7 +942,7 @@ section {
    7. Event Details Section
    -------------------------------------------------------------------------- */
 .event-section {
-    background-color: var(--color-bg-secondary);
+    background: var(--maroon-texture);
     max-width: 100%;
 }
 
@@ -923,7 +1006,8 @@ section {
     font-weight: 600;
 }
 
-.hijri-date, .sub-text {
+.hijri-date,
+.sub-text {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin-top: 0.4rem;
@@ -984,6 +1068,7 @@ section {
     vertical-align: middle;
     fill: currentColor;
 }
+
 .inline-icon {
     margin-right: 4px;
 }
@@ -1095,6 +1180,7 @@ section {
     margin-bottom: 2rem;
     transition: var(--transition-smooth);
 }
+
 .map-iframe-wrapper:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(53, 46, 30, 0.12);
@@ -1105,15 +1191,18 @@ section {
     .timeline::after {
         left: 20px;
     }
+
     .timeline-item {
         width: 100%;
         padding-left: 45px;
         padding-right: 0;
         text-align: left !important;
     }
+
     .timeline-item:nth-child(even) {
         left: 0;
     }
+
     .timeline-dot {
         left: 15px !important;
         right: auto !important;
@@ -1122,8 +1211,8 @@ section {
 
 /* Countdown Section at Bottom */
 .countdown-section {
-    background-color: var(--color-text-dark);
-    background-image: url('assets/wedding_bg.png');
+    background-color: var(--color-bg-primary);
+    background-image: url('assets/maroon_wedding_bg.png');
     background-size: cover;
     background-position: center;
     padding: 6rem 1.5rem;
@@ -1138,7 +1227,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(30, 26, 18, 0.85) 0%, rgba(30, 26, 18, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(74, 21, 32, 0.75) 0%, rgba(42, 11, 18, 0.9) 100%);
     z-index: 1;
 }
 
@@ -1228,9 +1317,9 @@ section {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.4s ease,
-                box-shadow 0.3s ease,
-                background 0.3s ease;
+        opacity 0.4s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
     overflow: visible;
 }
 
@@ -1276,24 +1365,38 @@ section {
 }
 
 @keyframes musicPulse {
-    0%, 100% { box-shadow: 0 6px 24px rgba(53,46,30,0.14), 0 0 0 0 rgba(212,175,55,0.4); }
-    50% { box-shadow: 0 6px 24px rgba(53,46,30,0.14), 0 0 0 10px rgba(212,175,55,0); }
+
+    0%,
+    100% {
+        box-shadow: 0 6px 24px rgba(53, 46, 30, 0.14), 0 0 0 0 rgba(212, 175, 55, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 6px 24px rgba(53, 46, 30, 0.14), 0 0 0 10px rgba(212, 175, 55, 0);
+    }
 }
 
 @keyframes rippleOut {
-    0% { transform: scale(1); opacity: 0.7; }
-    100% { transform: scale(2.2); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
 }
 
 /* --------------------------------------------------------------------------
    11. Footer Styling
    -------------------------------------------------------------------------- */
 .main-footer {
-    background-color: var(--color-bg-secondary);
+    background: var(--maroon-texture);
     color: var(--color-text-dark);
     text-align: center;
     padding: 5rem 1.5rem 3rem 1.5rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    border-top: 1px solid rgba(207, 168, 110, 0.25);
 }
 
 .footer-decor {
@@ -1363,7 +1466,7 @@ section {
     gap: 10px;
     font-size: 0.9rem;
     font-weight: 500;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     z-index: 2000;
     transform: translateY(100px);
     opacity: 0;
@@ -1395,6 +1498,7 @@ section {
         transform: translateY(-50px) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(105vh) rotate(360deg);
         opacity: 0;
@@ -1402,14 +1506,27 @@ section {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes heartbeat {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes scrollWheel {
@@ -1417,10 +1534,12 @@ section {
         top: 8px;
         opacity: 1;
     }
+
     50% {
         top: 22px;
         opacity: 0;
     }
+
     100% {
         top: 8px;
         opacity: 1;
@@ -1432,6 +1551,7 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1451,7 +1571,9 @@ section {
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
@@ -1470,17 +1592,17 @@ section {
     section {
         padding: 5rem 1.2rem;
     }
-    
-    
+
+
     .couple-grid {
         gap: 2rem;
     }
-    
+
     .event-info-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .info-item {
         padding: 1rem;
     }
@@ -1491,37 +1613,37 @@ section {
     section {
         padding: 4rem 1rem;
     }
-    
+
     .overlay-card {
         padding: 2.2rem 1.2rem;
     }
-    
+
     .countdown-container {
         gap: 0.6rem;
     }
-    
+
     .countdown-box {
         min-width: 62px;
         padding: 0.5rem;
     }
-    
+
     .countdown-box .time {
         font-size: 1.6rem;
     }
-    
+
     .countdown-box .label {
         font-size: 0.55rem;
     }
-    
+
     .rsvp-container {
         padding: 1.5rem 1rem;
     }
-    
+
     .wishes-list {
         grid-template-columns: 1fr;
         max-height: 450px;
     }
-    
+
     .music-icon-btn {
         bottom: 18px;
         right: 18px;
@@ -1535,7 +1657,7 @@ section {
     .countdown-box {
         min-width: 52px;
     }
-    
+
     .countdown-box .time {
         font-size: 1.3rem;
     }
@@ -1543,6 +1665,7 @@ section {
 
 /* Accessibility: Support preferred reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     ::before,
     ::after {
@@ -1554,15 +1677,16 @@ section {
         transition-duration: 0s !important;
         transition-delay: 0s !important;
     }
-    
+
     .scroll-reveal {
         opacity: 1 !important;
         transform: none !important;
     }
-    
+
     .music-icon-btn.playing {
         animation: none !important;
     }
+
     .music-ripple {
         animation: none !important;
     }

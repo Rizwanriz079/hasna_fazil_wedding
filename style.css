@@ -863,18 +863,21 @@ section {
 }
 
 .couple-card-header h3 {
-    font-family: var(--font-accent);
-    font-size: 2.2rem;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
     color: var(--color-primary-gold);
     margin-bottom: 0.5rem;
-    font-weight: 300;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .couple-card-header h4 {
-    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
     color: var(--color-text-dark);
     letter-spacing: 1px;
     margin-bottom: 1.8rem;
+    font-weight: 600;
 }
 
 .couple-details {
@@ -884,17 +887,19 @@ section {
 }
 
 .couple-details .relationship {
-    font-size: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-text-muted);
+    color: var(--color-primary-gold);
     font-weight: 600;
 }
 
 .couple-details .parents {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: var(--color-text-dark);
+    font-weight: 500;
 }
 
 .couple-card .divider {
@@ -921,17 +926,34 @@ section {
 }
 
 .couple-details .address {
-    font-size: 0.85rem;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
     color: var(--color-text-muted);
     margin-top: 0.5rem;
     line-height: 1.6;
 }
 
 .couple-details .contact {
-    font-size: 0.85rem;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
     color: var(--color-primary-gold);
     font-weight: 600;
     margin-top: 0.5rem;
+}
+
+.couple-details .contact-link,
+a[href^="tel:"] {
+    color: var(--color-primary-gold) !important;
+    text-decoration: none !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    transition: var(--transition-quick);
+}
+
+.couple-details .contact-link:hover,
+a[href^="tel:"]:hover {
+    color: var(--color-gold-hover) !important;
+    text-decoration: underline !important;
 }
 
 .couple-details i {
